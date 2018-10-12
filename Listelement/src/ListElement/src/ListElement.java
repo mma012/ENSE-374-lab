@@ -1,17 +1,23 @@
 package ListElement.src;
 
+// Creating ListElement class under package ListElement.src
 
 public class ListElement {
 	
 	private ListElement next ;
 	private ListElement previous;
 	private int data;
-		
+	
+// Constractor for new object initialization
+	
 	public ListElement() {
 		this.data = 0 ;
 		this.next = null;
 		this.previous = null;
 	}
+	
+// 	Defining Setters and Getters for retrieving and input data 
+//	from/to the list
 	
 	public ListElement getNext() {
 		return next;
@@ -31,7 +37,5 @@ public class ListElement {
 	public void setData(int data) {
 		this.data = data;
 	}
-	
-
 }
 
