@@ -1,36 +1,39 @@
 package ListElement.src;
 
 import ListElement.src.ListElement;
-import ListElement.src.LinkedList;
+import java.util.Scanner;
 
 public class MainClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
- 
-// Defining a new LinkedList and putting a value in the head list
-  LinkedList list = new LinkedList(5);
 
-// Adding new listElements to the list 
-  ListElement le2 =new ListElement();
-  le2.setData(6);
-  list.addElement(le2);
+		
+		// Adding new listElements to the list 
+		  System.out.println("How many elements you want to add to the list");
+		  Scanner userinput = new Scanner(System.in);
+		  int NumOfElements = userinput.nextInt();
+		  ListElement [] Le = new ListElement[NumOfElements];
+		  
+System.out.println("Enter the data of 1st element");
+Scanner data_userinput = new Scanner(System.in);
+int FirstListData = data_userinput.nextInt();
+
+// Defining a new LinkedList and putting a value in the head list
+  LinkedList list = new LinkedList(FirstListData);
+
+
   
-  ListElement le3 = new ListElement();
-  le3.setData(7);
-  list.addElement(le3);
-  
-  ListElement le4 = new ListElement();
-  le4.setData(8);
-  list.addElement(le4);
-  
-  //int mydata = list.head.getData();
-  //int mynext = list.head.getNext().getData();
-  //int mynextnext = list.head.getNext().getNext().getData();
-  //System.out.println("my data is "+mydata+", my next = "+ mynext+", my next next "+mynextnext);
-	
- // ListElement listel3 = list.getElement(0);
- // System.out.println("Third element has data "+ listel3.getData());
+  for (int i=1; i< Le.length; i++)
+  {
+   int count = i+1;
+   System.out.println("Add Data of element # " + count);
+   Scanner userdatainput = new Scanner(System.in);
+   int Listdata = userdatainput.nextInt();
+   Le[i] = new ListElement();
+   Le[i].setData(Listdata);
+   list.addElement(Le[i]);
+  }
   
   //Printing the data of the Linkedlist from head to tail
   list.printLinkedListHead();
