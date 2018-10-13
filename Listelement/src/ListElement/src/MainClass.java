@@ -37,14 +37,19 @@ LinkedList list = new LinkedList(FirstListData);
   System.out.println("Elements in the list from Head to Tail");
   list.printLinkedListHead();
   
-  
+//Printing the data of the Linkedlist from tail to head
+  System.out.println("Elements in the list from Tail to Head");
+  list.printLinkedListTail();
+ 
 //Deleting an element in the list
   System.out.println("Which list you want to delete? ");
     int listtodelete = userinput.nextInt()-1;
   list.deleteElement(listtodelete);
   System.out.println("Now the Elements in the list from Head to Tail are");
   list.printLinkedListHead();
-  
+  System.out.println("Now the Elements in the list from Tail to Head are");
+  list.printLinkedListTail();
+
 	
  }
 }
