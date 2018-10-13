@@ -82,29 +82,7 @@ public class LinkedList {
 	 
  }
 		
-//Function to print the list from tail to head
 
-public void printLinkedListTail()
-{
-	 ListElement tail = head;
-	// System.out.print(head.getData() +" ");
-	 while(hasNext(tail))
-	 {
-		 tail = tail.getNext();
-		 
-	 }
-	 System.out.print(tail.getData() + " ");
-	 
-	 
-	 while (hasPrevious(tail))
-	{
-	 tail = tail.getPrevious();
-	 System.out.print(tail.getData() +" ");
-	 }
-	System.out.println();
-	 
-}
- 
   
 // Boolean function to help to check if there is a next element or not
 	
