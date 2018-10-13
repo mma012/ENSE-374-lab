@@ -4,9 +4,12 @@ package ListElement.src;
 
 public class ListElement {
 	
-	private ListElement next ;
-	private ListElement previous;
+	ListElement next ;
+	ListElement previous;
 	private int data;
+	public Object todelete;
+	
+	
 	
 // Constractor for new object initialization
 	

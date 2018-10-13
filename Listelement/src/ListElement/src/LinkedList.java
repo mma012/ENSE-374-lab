@@ -50,9 +50,21 @@ public class LinkedList {
 			ListElement todelete = getElement(index);
 			ListElement previous = todelete.getPrevious();
 			ListElement next = todelete.getNext();
-			previous.setNext(next);
+						
+			if (index == 0 ) {
+				System.out.println("You have deleted the head");
+				head = head.getNext();
+				 head.setPrevious(null);
+				return head;
+				}
+				else if(todelete.getNext() == null) {
+				 System.out.println("You have deleted the tail");
+				 previous.next = null;}
+				else {
+			System.out.println("You have deleted list #" +(index+1));
 			next.setPrevious(previous);
-			
+			previous.setNext(next);}
+									
 			return next;		
 		}
 // Function to print the list from head to tail
@@ -70,9 +82,43 @@ public class LinkedList {
 	 
  }
 		
-		
+//Function to print the list from tail to head
+
+public void printLinkedListTail()
+{
+	 ListElement tail = head;
+	// System.out.print(head.getData() +" ");
+	 while(hasNext(tail))
+	 {
+		 tail = tail.getNext();
+		 
+	 }
+	 System.out.print(tail.getData() + " ");
+	 
+	 
+	 while (hasPrevious(tail))
+	{
+	 tail = tail.getPrevious();
+	 System.out.print(tail.getData() +" ");
+	 }
+	System.out.println();
+	 
+}
+ 
+  
 // Boolean function to help to check if there is a next element or not
 	
+	private boolean hasPrevious(ListElement currentelement) {
+	// TODO Auto-generated method stub
+	ListElement previous = currentelement.getPrevious();
+	if (previous ==null)
+	{
+		return false;
+	}
+	
+		return true;
+}
+
 	public Boolean hasNext(ListElement le)
 	{
 		
